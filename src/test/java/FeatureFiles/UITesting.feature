@@ -1,5 +1,5 @@
 Feature: Add Product Tracking List
-
+  @Regresssion
   Scenario: Login Process
     Given Navigate to Akakce website
     And Click on the element

@@ -11,6 +11,29 @@ public class DialogContent extends Parent{
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(),this);
     }
+
+    @FindBy(linkText = "Hesap Aç")
+    public WebElement hesapAc;
+
+    @FindBy(css = "input[id='rnufn']")
+    public WebElement nameInput;
+
+    @FindBy(css = "input[id='rnufn']")
+    public WebElement lastNameInput;
+
+    @FindBy(css = "input[id='rnufn']")
+    public WebElement email;
+
+    @FindBy(css = "input[id='rnufn']")
+    public WebElement confirmEmail;
+
+    @FindBy(css = "input[id='rnufn']")
+    public WebElement passwordRegister;
+
+    @FindBy(css = "input[id='rnufn']")
+    public WebElement confirmPassword;
+
+
     @FindBy(linkText = "Giriş Yap")
     public WebElement girisYapLink;
 
@@ -32,7 +55,7 @@ public class DialogContent extends Parent{
     @FindBy(css = "span[class='bt_v8']")
     public WebElement uruneGit;
 
-    @FindBy(css = "div[class='graph_w'] span")
+    @FindBy(xpath = "(//span[@class='ufo_v8'])[1]")
     public WebElement takibeAl;
 
     @FindBy(linkText = "Çık")
@@ -46,12 +69,16 @@ public class DialogContent extends Parent{
 
     @FindBy(css="a[title='Takip Listem']")
     public WebElement takipIcon;
-    @FindBy(linkText = "Büşra")
+    @FindBy(linkText = "Busra")
     public WebElement hesabimIcon;
+
+    @FindBy(css = "div[class='m-c']")
+    public WebElement verify;
 
     public WebElement getWebElement(String element) {
 
         switch (element) {
+            case "hesapAc": return hesapAc;
             case "searchTextBox":return searchTextBox;
             case "girisYapLink":return girisYapLink;
             case "eposta":return eposta;

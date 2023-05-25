@@ -52,4 +52,7 @@ public class Parent {
     public void jsClickFunction(WebElement element) {
         js.executeScript("arguments[0].click();", element);
     }
+
+
+
 }
